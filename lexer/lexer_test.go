@@ -3,6 +3,7 @@ package lexer
 import (
 	"testing"
 
+	"github.com/taise/monkey/lexer"
 	"github.com/taise/monkey/token"
 )
 
@@ -108,7 +109,7 @@ func TestNextToken(t *testing.T) {
 		{token.EOF, ""},
 	}
 
-	l := New(input)
+	l := lexer.New(input)
 
 	for i, tt := range tests {
 		tok := l.NextToken()
